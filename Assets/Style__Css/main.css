@@ -18,16 +18,56 @@ li{
 /* start navbar */
 header{
     width: 100%;
-    background-color: aqua;
     padding: 2em 4em;
 }
 nav{
     display: flex;
     align-items: center;
-    gap: 14em;
+    justify-content: space-between;
 }
 .links a{
-    
-
+    color: #000;
+    transition: 0.7s;
+}
+.links a:hover{
+    color: #d4b446;
+}
+.inp{
+    display: flex;
+}
+.icons__options{
+    display: flex;
+    gap: 1.3em;
+    align-items: center;
+}
+.icons__options i{
+    font-size: 25px;
+    color: #000;
+    transition: 0.7s;
+}
+.icons__options i:hover{
+    color: #d4b446;
+}
+.icons__options .hover{
+    position: relative;
+}
+.icons__options .hover::after{
+    position: absolute;
+    content: '3';
+    text-align: center;
+    color: #000;
+    width: 17px;
+    height: 17px;
+    background-color: #d4b446;
+    border-radius: 50%;
+    bottom: 0;
+    left: 14px;
+}
+.icons__options .bi-person{
+    font-size: 30px;
+}
+.icons__options .bi-list{
+    font-size: 30px;
+    cursor: pointer;
 }
 /* end navbar */
