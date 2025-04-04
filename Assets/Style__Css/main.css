@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Helvetica Neue", Helvetica, Arial,sans-serif;
+    text-transform: capitalize;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    display: flex;
+    gap: 3em;
+}
+li{
+    list-style: none;
+}
+/* start navbar */
+header{
+    width: 100%;
+    background-color: aqua;
+    padding: 2em 4em;
+}
+nav{
+    display: flex;
+    align-items: center;
+    gap: 14em;
+}
+.links a{
+    
+
+}
+/* end navbar */
