@@ -14,6 +14,7 @@ ul{
 }
 li{
     list-style: none;
+    position: relative;
 }
 /* start navbar */
 header{
@@ -69,5 +70,113 @@ nav{
 .icons__options .bi-list{
     font-size: 30px;
     cursor: pointer;
+}
+.links #menu__home{
+    transition: 5s step-start;
+}
+.links #menu__home:hover .drop__menu{
+    display: block;
+}
+.drop__menu{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: -1em;
+    width: 250px;
+    padding: 2em;
+    gap: 20em;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    display: none;
+}
+.drop__menu li{
+        color: #ababab;
+        width: fit-content;
+        transition: 0.5s;
+}
+.drop__menu li:hover{
+    color: #000;
+}
+.drop__menu::after{
+    position: absolute;
+    content: '';
+    left: 20px;
+    top: -20px;
+    border-color: transparent transparent #ddd transparent;
+    border-width: 10px 10px 10px 10px;
+    border-style: solid;
+}
+#menu___shop{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+}
+#menu___shop:hover .menu__shop{
+    display: flex;
+}
+.menu__shop{
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        top: 70px;
+        left: -26em;
+        width: 950px;
+        padding: 2em;
+        gap: 4em;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        cursor: pointer;
+        display: none;
+}
+.menu__shop::after{
+    position: absolute;
+    content: '';
+    left: 45%;
+    top: -20px;
+    border-color: transparent transparent #ddd transparent;
+    border-width: 10px 10px 10px 10px;
+    border-style: solid;
+}
+.menu__shop li{
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.menu__shop p {
+    color: #ababab;
+    width: fit-content;
+    transition: 0.5s;
+}
+.menu__shop p:hover {
+    color: #000;
+}
+.menu__shop .image{
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu__shop .image img{
+    width: 100%;
+    object-fit: cover;
+}
+#menu__home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+@media (max-width: 768px) {
+    .links{
+        display: none;
+    }
+        header{
+            padding: 20px;
+        }
+    
 }
 /* end navbar */
