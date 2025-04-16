@@ -234,8 +234,8 @@ nav {
     width: fit-content;
 }
 
-.menu__down:hover>.drop__down__icon {
-    display: flex;
+.toggle__menu__bar{
+    display: flex !important;   
 }
 
 .menu__down .drop__down__icon {
@@ -540,3 +540,21 @@ nav {
     }
 }
 /* end hero__preview */
+.btn__scroll{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 5%;
+    right: 3%;
+    background-color: #d4b446;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    display: none;
+}
+.btn__scroll a i{
+    font-size: 25px;
+    color: #fff;
+}
