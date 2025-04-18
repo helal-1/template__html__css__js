@@ -43,12 +43,20 @@ li {
 }
 
 /* start navbar */
+/* class code js  */
+.change_header_color {
+    background-color: #fff;
+    box-shadow: 1px 1px 1px #e1e1e1;
+    position: fixed;
+}
+/* end class code js  */
 header {
     width: 100%;
     padding: 1.5em 4em;
-    background-color: #ffffff;
-    box-shadow: 1px 1px 1px #e1e1e1;
+    /* background-color: #ffffff; */
+    /* box-shadow: 1px 1px 1px #e1e1e1; */
     position: fixed;
+    transition: .4s;
     z-index: 99999;
 }
 
@@ -558,3 +566,5 @@ nav {
     font-size: 25px;
     color: #fff;
 }
+
+

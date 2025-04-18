@@ -1,4 +1,4 @@
-// scroll window ==>
+// scroll window btn up ==>
 let btn = document.querySelector(".btn__scroll");
 window.onscroll = function () {
   if (window.scrollY >= 200) {
@@ -14,25 +14,23 @@ btn.onclick = function () {
     behavior: "smooth",
   });
 };
-// position fixed  header==>
-    // let fixed = document.querySelector("header");
-    // window.onscroll = function () {
-    //   if (window.scrollY >= 250) {
-    //     fixed.style.position = "fixed";
-    //   } else {
-    //    fixed.style.position = "relative";
-    //   }
-    // };
-    // window.scrollTo({
-    // top: 0,
-    // left: 0,
-    // behavior: "smooth"});
-    // menu bar ==>
+// menu bar ==>
 let menuList = document.querySelector(".menu__down");
 let menuDown = document.querySelector(".drop__down__icon");
-let outMenu = document.querySelector(".icon__out");
-function myFunction() {
-  console.log('hello');
+let outMenu = document.querySelector(".close_menu");
+function open_menu() {
+  console.log("hello");
   menuDown.classList.add("toggle__menu__bar");
 }
-
+function close_menu() {
+  console.log("hello");
+  menuDown.classList.remove("toggle__menu__bar");
+}
+// header 
+window.addEventListener("scroll", () => {
+  if (scrollY >= 100) {
+    document.querySelector("header").classList.add("change_header_color");
+  } else {
+    document.querySelector("header").classList.remove("change_header_color");
+  }
+});
