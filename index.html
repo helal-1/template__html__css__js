@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- link aos animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- link swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- link google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -237,8 +239,8 @@
                     <li><a href="#">Table</a></li>
                 </ul>
             </div>
-            <div class="item__product">
-                <i class="bi bi-arrow-left"></i>
+            <div class="item__product" id="slider">
+                <i class="bi bi-arrow-left" id="left"></i>
                 <div class="card" data-aos="zoom-in" data-aos-duration="10000">
                     <div class="image__one">
                         <img src="./Assets/File__mage/1_1-300x300.webp" loading="lazy">
@@ -298,7 +300,8 @@
                         <span>Â£40.00 - Â£635.00</span>
                     </div>
                 </div>
-                <i class="bi bi-arrow-right"></i>
+                <i class="bi bi-arrow-right" id="right"></i>
+                
             </div>
         </div>
 
@@ -313,7 +316,7 @@
     <section class="parent__shop">
         <h1>Best selling</h1>
         <div class="container">
-            <div class="links" data-aos="fade-up" data-aos-duration="10000">
+            <div class="links" data-aos="fade-up" data-aos-duration="1000">
                 <ul>
                     <li><a href="#">All Products</a></li>
                     <li><a href="#">Accessories</a></li>
@@ -325,7 +328,7 @@
             </div>
             <div class="item__product">
 
-                <div class="card" data-aos="zoom-in" data-aos-duration="10000">
+                <div class="card" data-aos="zoom-in" data-aos-duration="1000">
                     <div class="image__one">
                         <img src="./Assets/File__mage/1_1-300x300.webp" loading="lazy">
                         <div class="hover__icons">
@@ -340,7 +343,7 @@
                     </div>
                 </div>
 
-                <div class="card" data-aos="zoom-in" data-aos-duration="12000">
+                <div class="card" data-aos="zoom-in" data-aos-duration="2000">
                     <div class="image__one">
                         <img src="./Assets/File__mage/1_2-300x300.webp" loading="lazy">
                         <div class="hover__icons">
@@ -355,7 +358,7 @@
                     </div>
                 </div>
 
-                <div class="card" data-aos="zoom-in" data-aos-duration="14000">
+                <div class="card" data-aos="zoom-in" data-aos-duration="4000">
                     <div class="image__one">
                         <img src="./Assets/File__mage/1_3-300x300.webp" loading="lazy">
                         <div class="hover__icons">
@@ -370,7 +373,7 @@
                     </div>
                 </div>
 
-                <div class="card" data-aos="zoom-in" data-aos-duration="16000">
+                <div class="card" data-aos="zoom-in" data-aos-duration="6000">
                     <div class="image__one">
                         <img src="./Assets/File__mage/1_4-300x300.webp" loading="lazy">
                         <div class="hover__icons">
@@ -385,7 +388,7 @@
                     </div>
                 </div>
 
-                <div class="card" data-aos="zoom-in" data-aos-duration="12000">
+                <div class="card" data-aos="zoom-in" data-aos-duration="1000">
                     <div class="image__one">
                         <img src="./Assets/File__mage/1_5-300x300.webp" loading="lazy">
                         <div class="hover__icons">
@@ -399,7 +402,7 @@
                         <span>Â£40.00 - Â£635.00</span>
                     </div>
                 </div>
-                <div class="card" data-aos="zoom-in" data-aos-duration="10000">
+                <div class="card" data-aos="zoom-in" data-aos-duration="2000">
                     <div class="image__one">
                         <img src="./Assets/File__mage/1_6-300x300.webp" loading="lazy">
                         <div class="hover__icons">
@@ -413,7 +416,7 @@
                         <span>Â£40.00 - Â£635.00</span>
                     </div>
                 </div>
-                <div class="card" data-aos="zoom-in" data-aos-duration="14000">
+                <div class="card" data-aos="zoom-in" data-aos-duration="4000">
                     <div class="image__one">
                         <img src="./Assets/File__mage/1_7-300x300.webp" loading="lazy">
                         <div class="hover__icons">
@@ -427,7 +430,7 @@
                         <span>Â£40.00 - Â£635.00</span>
                     </div>
                 </div>
-                <div class="card" data-aos="zoom-in" data-aos-duration="16000">
+                <div class="card" data-aos="zoom-in" data-aos-duration="6000">
                     <div class="image__one">
                         <img src="./Assets/File__mage/1_8-300x300.webp" loading="lazy">
                         <div class="hover__icons">
@@ -455,7 +458,9 @@
     <div class="btn__scroll">
         <a href="#"><i class="bi bi-arrow-up"></i></a>
     </div>
+    <!-- link js -->
     <script src="./Assets/Scripet__Js/main.js"></script>
+    <!-- link aos animation -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();

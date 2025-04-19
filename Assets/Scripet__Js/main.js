@@ -19,11 +19,11 @@ let menuList = document.querySelector(".menu__down");
 let menuDown = document.querySelector(".drop__down__icon");
 let outMenu = document.querySelector(".close_menu");
 function open_menu() {
-  console.log("hello");
+  // console.log("hello");
   menuDown.classList.add("toggle__menu__bar");
 }
 function close_menu() {
-  console.log("hello");
+  // console.log("hello");
   menuDown.classList.remove("toggle__menu__bar");
 }
 // header 
@@ -34,4 +34,15 @@ window.addEventListener("scroll", () => {
     document.querySelector("header").classList.remove("change_header_color");
   }
 });
-
+// slider card
+var sliderElement = document.getElementById("slider");
+var swiper_prev = document.getElementById("left");
+var swiper_next = document.getElementById("right");
+swiper_prev.onclick = prevSlide;
+swiper_next.onclick = nextSlide;
+function prevSlide(){
+  console.log('prev');
+}
+function nextSlide(){
+  console.log("next");
+}
