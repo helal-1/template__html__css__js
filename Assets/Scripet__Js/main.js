@@ -28,9 +28,10 @@ function close_menu() {
 }
 // header 
 window.addEventListener("scroll", () => {
-  if (scrollY >= 100) {
+  if (scrollY >= 200) {
     document.querySelector("header").classList.add("change_header_color");
   } else {
     document.querySelector("header").classList.remove("change_header_color");
   }
 });
+

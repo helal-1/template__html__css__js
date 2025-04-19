@@ -28,6 +28,7 @@ li {
     box-shadow: 1px 1px 1px #e1e1e1;
     position: fixed;
 }
+
 /* end class code js  */
 header {
     width: 100%;
@@ -221,8 +222,8 @@ nav {
     width: fit-content;
 }
 
-.toggle__menu__bar{
-    display: flex !important;   
+.toggle__menu__bar {
+    display: flex !important;
 }
 
 .menu__down .drop__down__icon {
@@ -424,7 +425,8 @@ nav {
     position: absolute;
     top: 30%;
 }
-.cards{
+
+.cards {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -435,7 +437,8 @@ nav {
     width: 90%;
     height: 320px;
 }
-.cards .item__1{
+
+.cards .item__1 {
     flex-grow: 1;
     flex-basis: 200px;
     background-image: url(../File__mage/bn-hf-1-570x340.webp);
@@ -445,28 +448,34 @@ nav {
     background-position: center;
     padding: 3em 2em;
 }
-.banner-title{
+
+.banner-title {
     display: flex;
     flex-direction: column;
 }
-.banner-title h3{
+
+.banner-title h3 {
     padding-bottom: 0.4em;
-            font-size: 28px;
-            color: #000;
+    font-size: 28px;
+    color: #000;
 }
-.banner-title h6{
-    padding-bottom: 3em ;
+
+.banner-title h6 {
+    padding-bottom: 3em;
     font-size: 18px;
     font-weight: 400;
 }
-.banner-title a{
+
+.banner-title a {
     color: #000;
     transition: 0.5s;
 }
-.banner-title a:hover{
+
+.banner-title a:hover {
     color: #d4b446;
 }
-.cards .item__2{
+
+.cards .item__2 {
     flex-grow: 1;
     flex-basis: 200px;
     padding: 3em 2em;
@@ -476,10 +485,12 @@ nav {
     width: 100%;
     background-size: cover;
 }
+
 @media (max-width: 768px) {
-    .cards{
+    .cards {
         width: 100%;
     }
+
     .left {
         z-index: 6;
     }
@@ -487,10 +498,12 @@ nav {
     .right {
         z-index: 6;
     }
-    .hero__preview{
+
+    .hero__preview {
         padding: 7em 1em 12em;
-        
+
     }
+
     .container {
         gap: 3em;
         overflow: hidden;
@@ -521,13 +534,14 @@ nav {
 }
 
 @media (min-width: 768px) and (max-width: 1114px) {
-    .hero__preview{
+    .hero__preview {
         overflow: hidden;
 
     }
 }
+
 /* end hero__preview */
-.btn__scroll{
+.btn__scroll {
     position: fixed;
     width: 50px;
     height: 50px;
@@ -541,9 +555,562 @@ nav {
     border-radius: 50%;
     display: none;
 }
-.btn__scroll a i{
+
+.btn__scroll a i {
     font-size: 25px;
     color: #fff;
 }
 
+/* start parent__product__scroll */
+.parent__product__scroll {
+    width: 100%;
+    padding: 10em 4em 0;
+}
 
+.parent__product__scroll h1 {
+    font-size: 30px;
+}
+
+.parent__product__scroll .container {
+    padding-top: .3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6em;
+    height: auto;
+}
+
+.parent__product__scroll .links {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+}
+
+.parent__product__scroll .links ul {
+    gap: 0;
+}
+
+.parent__product__scroll .links li {
+    padding: 0 17px;
+    border-right: 1px solid #000;
+    line-height: 12px;
+    cursor: pointer;
+    display: block;
+}
+
+.parent__product__scroll .links ul li:nth-of-type(1) a {
+    color: #999;
+}
+
+.parent__product__scroll .links ul li:nth-of-type(6) {
+    border: none;
+}
+
+.parent__product__scroll .item__product {
+    display: flex;
+    flex-direction: row;
+    gap: 1.2em;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.parent__product__scroll .item__product .card {
+    width: fit-content;
+}
+
+.parent__product__scroll .item__product .card .image__one {
+    position: relative;
+    width: 90%;
+}
+
+.parent__product__scroll .item__product .card:nth-child(1) .image__one::after{
+    position: absolute;
+    content: 'out of stock';
+    right: 15px;
+    top: 15px;
+    background: #000;
+    color: #fff;
+    padding: 4px 15px;
+
+}
+
+.parent__product__scroll .item__product .card:nth-child(4) .image__one::after {
+    position: absolute;
+    content: '-14%';
+    right: 15px;
+    top: 15px;
+    background: #f14000;
+    color: #fff;
+    padding: 4px 15px;
+
+}
+
+.parent__product__scroll .item__product .card .image__one img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.parent__product__scroll .item__product .card .image__one .hover__icons {
+    position: absolute;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2));
+    top: 0;
+    width: 100%;
+    opacity: 0;
+    height: 98.3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.6s;
+    gap: 1.5em;
+}
+
+.parent__product__scroll .item__product .card .image__one:hover .hover__icons {
+    opacity: 1;
+}
+
+.parent__product__scroll .item__product .card .image__one .hover__icons a {
+    width: 45px;
+    height: 45px;
+    line-height: 48px;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+.parent__product__scroll .item__product .card .image__one .hover__icons a:nth-child(1) {
+    transition: all .1s;
+    transform: translateY(1em);
+}
+
+.parent__product__scroll .item__product .card .image__one .hover__icons a:nth-child(2) {
+    transition: all .3s;
+    transform: translateY(1.5em);
+}
+
+.parent__product__scroll .item__product .card .image__one .hover__icons a:nth-child(3) {
+    transition: all .4s;
+    transform: translateY(1.6em);
+}
+
+.parent__product__scroll .item__product .card .image__one .hover__icons:hover a:nth-child(1) {
+    transition-timing-function: ease-in;
+    transform: translateY(0em);
+    opacity: 1;
+}
+
+.parent__product__scroll .item__product .card .image__one .hover__icons:hover a:nth-child(2) {
+    transition-timing-function: ease-in;
+    transform: translateY(0em);
+    opacity: 1;
+}
+
+.parent__product__scroll .item__product .card .image__one .hover__icons:hover a:nth-child(3) {
+    transition-timing-function: ease-in;
+    transform: translateY(0em);
+    opacity: 1;
+}
+
+.parent__product__scroll .item__product .card .image__one .hover__icons a i {
+    font-size: 18px;
+    color: #000;
+}
+
+.parent__product__scroll .item__product .card .image__one .hover__icons a:hover i {
+    color: #d4b446;
+}
+
+.title__image {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+.title__image h6 a {
+    font-size: 1rem;
+    line-height: 3;
+    color: #000;
+    transition: 0.5s;
+}
+
+.title__image h6 a:hover {
+    color: #d4b446;
+}
+
+.title__image span {
+    color: #666;
+    font-size: 18px;
+}
+
+.parent__product__scroll .item__product .bi-arrow-left {
+    position: absolute;
+    left: 3%;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.parent__product__scroll .item__product .bi-arrow-right {
+    position: absolute;
+    right: 3%;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+@media (max-width: 767px) {
+    .parent__product__scroll {
+        padding: 24em 1em 0;
+    }
+
+    .parent__product__scroll h1 {
+        text-align: center;
+    }
+
+    .parent__product__scroll .item__product {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1.2em;
+        width: 100%;
+    }
+
+    .parent__product__scroll .links {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .parent__product__scroll .links ul {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: 1em;
+    }
+
+    .parent__product__scroll .container {
+        padding-top: 3em;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    .parent__product__scroll .item__product .card {
+        width: 100%;
+    }
+
+    .parent__product__scroll .item__product .card .image__one {
+        width: 100%;
+    }
+
+    .title__image {
+        width: 100%;
+    }
+}
+
+/* @media (min-width: 768px) and (max-width: 1114px) {} */
+
+/* Collection */
+.Collection {
+    background-image: url(../File__mage/banner_large.jpg);
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    padding: 7em 4em;
+    margin-top: 6em;
+}
+
+.Collection h1 {
+    font-size: 38px;
+}
+
+.Collection p {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    line-height: 3;
+}
+
+.Collection h1 span {
+    color: red;
+}
+
+.Collection .text-btn-normal {
+    margin-top: 4em;
+}
+
+@media (max-width: 767px) {
+    .Collection {
+        margin-top: 2em;
+        padding: 3em 1em;
+    }
+
+    .Collection h1 {
+        font-size: 34px;
+    }
+
+    .Collection p {
+        line-height: normal;
+        padding: 2em 0;
+    }
+}
+/* end parent__product__scroll */
+/* start parent__shop */
+.parent__shop {
+    width: 100%;
+    padding: 10em 4em 0;
+}
+
+.parent__shop h1 {
+    font-size: 30px;
+}
+
+.parent__shop .container {
+    padding-top: .3em;
+    display: flex;
+    flex-direction: column;
+    gap: 6em;
+    height: auto;
+}
+
+.parent__shop .links {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+}
+
+.parent__shop .links ul {
+    gap: 0;
+}
+
+.parent__shop .links li {
+    padding: 0 17px;
+    border-right: 1px solid #000;
+    line-height: 12px;
+    cursor: pointer;
+    display: block;
+}
+
+.parent__shop .links ul li:nth-of-type(1) a {
+    color: #999;
+}
+
+.parent__shop .links ul li:nth-of-type(6) {
+    border: none;
+}
+
+.parent__shop .item__product {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+}
+
+.parent__shop .item__product .card {
+    width: 280px;
+    padding-top: 2em;
+}
+
+.parent__shop .item__product .card .image__one {
+    position: relative;
+    width: 90%;
+}
+
+.parent__shop .item__product .card:nth-child(1) .image__one::after {
+    position: absolute;
+    content: 'out of stock';
+    right: 15px;
+    top: 15px;
+    background: #000;
+    color: #fff;
+    padding: 4px 15px;
+
+}
+
+.parent__shop .item__product .card:nth-child(4) .image__one::after {
+    position: absolute;
+    content: '-14%';
+    right: 15px;
+    top: 15px;
+    background: #f14000;
+    color: #fff;
+    padding: 4px 15px;
+
+}
+
+.parent__shop .item__product .card .image__one img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.parent__shop .item__product .card .image__one .hover__icons {
+    position: absolute;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2));
+    top: 0;
+    width: 100%;
+    opacity: 0;
+    height: 98.3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.6s;
+    gap: 1.5em;
+}
+
+.parent__shop .item__product .card .image__one:hover .hover__icons {
+    opacity: 1;
+}
+
+.parent__shop .item__product .card .image__one .hover__icons a {
+    width: 45px;
+    height: 45px;
+    line-height: 48px;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+.parent__shop .item__product .card .image__one .hover__icons a:nth-child(1) {
+    transition: all .1s;
+    transform: translateY(1em);
+}
+
+.parent__shop .item__product .card .image__one .hover__icons a:nth-child(2) {
+    transition: all .3s;
+    transform: translateY(1.5em);
+}
+
+.parent__shop .item__product .card .image__one .hover__icons a:nth-child(3) {
+    transition: all .4s;
+    transform: translateY(1.6em);
+}
+
+.parent__shop .item__product .card .image__one .hover__icons:hover a:nth-child(1) {
+    transition-timing-function: ease-in;
+    transform: translateY(0em);
+    opacity: 1;
+}
+
+.parent__shop .item__product .card .image__one .hover__icons:hover a:nth-child(2) {
+    transition-timing-function: ease-in;
+    transform: translateY(0em);
+    opacity: 1;
+}
+
+.parent__shop .item__product .card .image__one .hover__icons:hover a:nth-child(3) {
+    transition-timing-function: ease-in;
+    transform: translateY(0em);
+    opacity: 1;
+}
+
+.parent__shop .item__product .card .image__one .hover__icons a i {
+    font-size: 18px;
+    color: #000;
+}
+
+.parent__shop .item__product .card .image__one .hover__icons a:hover i {
+    color: #d4b446;
+}
+
+.title__image {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+.title__image h6 a {
+    font-size: 1rem;
+    line-height: 3;
+    color: #000;
+    transition: 0.5s;
+}
+
+.title__image h6 a:hover {
+    color: #d4b446;
+}
+
+.title__image span {
+    color: #666;
+    font-size: 18px;
+}
+
+.parent__shop .item__product .bi-arrow-left {
+    position: absolute;
+    left: 3%;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.parent__shop .item__product .bi-arrow-right {
+    position: absolute;
+    right: 3%;
+    font-size: 20px;
+    cursor: pointer;
+}
+@media (max-width: 767px) {
+    .parent__shop {
+        padding: 3em 1em 0;
+    }
+
+    .parent__shop h1 {
+        text-align: center;
+    }
+
+    .parent__shop .item__product {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1.2em;
+        width: 100%;
+    }
+
+    .parent__shop .links {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .parent__shop .links ul {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: 1em;
+    }
+
+    .parent__shop .container {
+        padding-top: 3em;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    .parent__shop .item__product .card {
+        width: 100%;
+    }
+
+    .parent__shop .item__product .card .image__one {
+        width: 100%;
+    }
+
+    .title__image {
+        width: 100%;
+    }
+}
+/* end parent__shop */
