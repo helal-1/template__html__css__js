@@ -40,9 +40,10 @@ var swiper_prev = document.getElementById("left");
 var swiper_next = document.getElementById("right");
 swiper_prev.onclick = prevSlide;
 swiper_next.onclick = nextSlide;
-function prevSlide(){
+function prevSlide() {
   console.log('prev');
 }
-function nextSlide(){
+function nextSlide() {
   console.log("next");
 }
+// slider hero__banner
