@@ -428,15 +428,23 @@ nav {
 .image__right .img_2 {
     position: absolute;
     top: 30%;
+    right: 0;
+}
+.animation {
+    transform: translate(200px, 300px);
+    animation: trans .5s forwards;
 }
 
-.image__right_tow {
-    width: 50%;
-    position: absolute;
-    right: 0;
-    align-items: center;
-    display: flex;
-    display: none;
+@keyframes trans {
+    from {
+        transform: translate(200px, 300px);
+        opacity: 0;
+    }
+
+    to {
+        transform: none;
+        opacity: 1;
+    }
 }
 
 .cards {
@@ -536,7 +544,7 @@ nav {
     }
 
     .image__right .img_2 {
-        width: 300px;
+        width: 220px;
     }
 
     .image__right .img_1 {
