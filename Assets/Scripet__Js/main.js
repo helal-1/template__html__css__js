@@ -61,10 +61,10 @@ function showSlides(n) {
 let scrollContainer = document.querySelector(".item__product");
 let Btn_prev = document.getElementById("left")
 let nextBtn = document.getElementById("right")
-scrollContainer.addEventListener("wheel" , (evt)=>{
-  evt.preventDefault();
-  scrollContainer.scrollLeft += 2000;
-});
+// scrollContainer.addEventListener("wheel" , (evt)=>{
+//   evt.preventDefault();
+//   scrollContainer.scrollLeft += 2000;
+// });
 Btn_prev.addEventListener("click",()=>{
   scrollContainer.style.scrollBehavior = "smooth";
   scrollContainer.scrollLeft -= 300;
