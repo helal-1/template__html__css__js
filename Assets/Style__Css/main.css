@@ -801,7 +801,9 @@ nav {
     .parent__product__scroll h1 {
         text-align: center;
     }
-
+.parent__product__scroll .item__product::-webkit-scrollbar {
+    display: flex;
+}
     .parent__product__scroll .item__product {
         display: flex;
         flex-direction: row;
