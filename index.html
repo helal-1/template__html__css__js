@@ -184,11 +184,10 @@
         </nav>
     </header>
     <section class="hero__preview">
-        <div class="container">
-
-            <span class="left">
-                <i class="bi bi-chevron-left"  onclick="plusSlides(1)"></i>
-            </span>
+        <span class="left">
+            <i class="bi bi-chevron-left"  onclick="plusSlides(1)"></i>
+        </span>
+        <div class="container" id="slider_hero">
             <div class="title__page">
                 <h5>
                     CHAIR <br> COLLECTION <br> 2022
@@ -201,14 +200,25 @@
                 <img class="img_1" src="./Assets/File__mage/home-full-width-2.webp" loading="lazy">
                 <img class="img_2 animation" src="./Assets/File__mage/home-full-width-1.webp" loading="lazy">
             </div>
+        </div>
+        <div class="container" id="slider_hero">
+
+            <div class="title__page">
+                <h5>
+                    CHAIR <br> COLLECTION <br> 2022
+                </h5>
+                <h1>Chanel Chair <br> High Quality Walnut</h1>
+                <a href="#" class="text-btn-normal font-weight--reguler font-lg-p">Discover Collection <i
+                        class="bi bi-arrow-right"></i></a>
+            </div>
             <div class="image__right ">
                 <img class="img_1" src="./Assets/File__mage/home-full-width-2.webp" loading="lazy">
                 <img class="img_2 animation" src="./Assets/File__mage/home-full-width-4.webp" loading="lazy" style="right: 10%;">
             </div>
-            <span class="right">
-                <i class="bi bi-chevron-right"  onclick="plusSlides(-1)"></i>
-            </span>
         </div>
+        <span class="right">
+            <i class="bi bi-chevron-right"  onclick="plusSlides(-1)"></i>
+        </span>
     </section>
     <div class="cards">
         <div class="item__1" data-aos="fade-up" data-aos-duration="10000">
@@ -554,7 +564,6 @@
     <div
         style="display: flex; justify-content: space-between; flex-wrap: wrap; max-width: 1200px; margin: auto; gap: 20px;">
 
-        <!-- القسم الأول -->
         <div class="div_1">
             <h3 style="font-size: 30px;">Helendo</h3>
             <p><i class="bi bi-geo-alt-fill"></i> Chicago, USA 2018</p>
@@ -566,7 +575,6 @@
             </div>
         </div>
 
-        <!-- القسم الثاني -->
         <div class="div_2">
             <h3>Quick Links</h3>
             <ul style="list-style: none; padding: 1em 0; display: flex;
@@ -578,7 +586,6 @@
             </ul>
         </div>
 
-        <!-- القسم الثالث - اختياري -->
         <div class="footer_inp">
             <h3>Newsletter</h3>
             <input type="email" placeholder="Your email Address"

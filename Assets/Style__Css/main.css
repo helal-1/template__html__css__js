@@ -389,12 +389,14 @@ nav {
 .left {
     position: absolute;
     left: 15px;
+    top: 65%;
     cursor: pointer;
 }
 
 .right {
     position: absolute;
     right: 15px;
+    top: 65%;
     cursor: pointer;
 }
 
@@ -514,10 +516,12 @@ nav {
 
     .left {
         z-index: 6;
+        top: 45%;
     }
 
     .right {
         z-index: 6;
+        top: 45%;
     }
 
     .hero__preview {
