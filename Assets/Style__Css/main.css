@@ -31,8 +31,16 @@ li {
     background-color: #fff;
     box-shadow: 1px 1px 1px #e1e1e1;
     position: fixed;
+    animation: height 1.5s forwards;
 }
-
+@keyframes height {
+    from {
+       transform: translateY(-100%);
+    }
+    to {
+       transform: translateY(0%);
+    }
+}
 /* end class code js  */
 header {
     width: 100%;
