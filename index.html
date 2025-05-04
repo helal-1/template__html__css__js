@@ -120,7 +120,20 @@
             </div>
             <div class="inp">
                 <div class="icons__options">
-                    <a href="#"><i class="bi bi-person"></i></a>
+                    <div class="login"><i class="bi bi-person" onclick="open_log()"></i>
+                        <ul class="account">
+                            <i class="bi bi-x-lg" style="position: absolute; right: 10%; cursor: pointer;" id="close_menu_login" onclick="close_log()"></i>
+                            <h2>Login your account</h2>
+                            <li><input type="text" name="name" placeholder="Username"></li>
+                            <li><input type="password" name="password" id="password" placeholder="password">
+                            <button id="eye_open"><i class="bi bi-eye" id="icon"></i></button></li>
+                            <div class="Remember">
+                                <h3>Remember me</h3>
+                                <h3>Lost your password?</h3>
+                            </div>
+                            <button type="submit">log in</button>
+                        </ul>
+                    </div>
                     <a class="hover" href="#"><i class="bi bi-heart"></i></a>
                     <a class="hover" href="#"><i class="bi bi-bag"></i></a>
                     <div class="menu__down ">
