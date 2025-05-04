@@ -406,6 +406,14 @@ nav {
     outline: none;
     cursor: pointer;
 }
+@media (max-width: 768px){
+    .login .account {
+            position: absolute , fixed;
+            width: 320px;
+            left: -480%;
+            top: 20vh;
+        }
+}
 /* end navbar */
 /* start hero__preview */
 .hero__preview {
