@@ -44,13 +44,15 @@ function close_log() {
     account.style.display = "none"
 
 }
-// card product 
-const cards = document.querySelector(".card");
-const btn_card = document.getElementById("btn_card");
-btn_card.addEventListener("click", () => {
-        cards.classList.add('x');
+// product 
+function product() {
+    const btn_card = document.getElementsByClassName("btn_close");
+    const cards = document.getElementsByClassName("card");
 
-});
-
-
-
+    for (let i = 0; i < cards.length; i++) {
+        btn_card[i].addEventListener('click', () => {
+            cards[i].style.display = "none";
+        });
+    }
+}
+product();

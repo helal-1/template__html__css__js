@@ -19,7 +19,7 @@ let menuList = document.querySelector(".menu__down");
 let menuDown = document.querySelector(".drop__down__icon");
 let outMenu = document.querySelector(".close_menu");
 function open_menu() {
-  menuDown.classList.add("toggle__menu__bar");
+  menuDown.classList.toggle("toggle__menu__bar");
 }
 function close_menu() {
   menuDown.classList.remove("toggle__menu__bar");
