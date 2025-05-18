@@ -1,0 +1,29 @@
+.carts_dropdown {
+    position: relative;
+}
+
+.carts_dom {
+    width: 398px;
+    height: 100vh;
+    left: auto;
+    right: -7em;
+    top: -2em;
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    position: absolute;
+    background-color: #ffffff;
+    border-left: 1px solid #e1e1e1;
+    overflow: auto;
+    z-index: 1000;
+    display: none;
+}
+.active_carts{
+    display: flex;
+}
+.products_dom{
+    width: 100%;
+    height: 300px;
+    /* background-color: blue; */
+}

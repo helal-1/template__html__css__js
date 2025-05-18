@@ -1,3 +1,5 @@
+@import './carts.css';
+
 * {
     padding: 0;
     margin: 0;
@@ -24,6 +26,7 @@ li {
     list-style: none;
     position: relative;
 }
+
 /* start navbar */
 /* class code js  */
 .change_header_color {
@@ -32,14 +35,17 @@ li {
     position: fixed;
     animation: height 1.5s forwards;
 }
+
 @keyframes height {
     from {
-       transform: translateY(-100%);
+        transform: translateY(-100%);
     }
+
     to {
-       transform: translateY(0%);
+        transform: translateY(0%);
     }
 }
+
 /* end class code js  */
 header {
     width: 100%;
@@ -111,7 +117,7 @@ nav {
 }
 
 .links #menu__home {
-    transition: 5s step-start;
+    transition: 5s ease;
 }
 
 .links #menu__home:hover .drop__menu {
@@ -147,10 +153,12 @@ nav {
     position: absolute;
     content: "";
     left: 20px;
-    top: -20px;
-    border-color: transparent transparent #fff transparent;
+    top: -40px;
+    border-color: transparent transparent #ddd transparent;
     border-width: 10px 10px 10px 10px;
     border-style: solid;
+    height: 20px;
+
 }
 
 #menu___shop {
@@ -186,10 +194,11 @@ nav {
     position: absolute;
     content: "";
     left: 45%;
-    top: -20px;
-    border-color: transparent transparent #fff transparent;
+    top: -40px;
+    border-color: transparent transparent #ddd transparent;
     border-width: 10px 10px 10px 10px;
     border-style: solid;
+    height: 20px;
 }
 
 .menu__shop li {
@@ -359,11 +368,12 @@ nav {
     }
 }
 
-.login{
+.login {
     position: relative;
     cursor: pointer;
 }
-.login .account{
+
+.login .account {
     position: absolute;
     display: flex;
     height: auto;
@@ -377,18 +387,21 @@ nav {
     gap: 2em;
     display: none;
 }
-.login .account h2{
+
+.login .account h2 {
     color: #000;
     font-size: 16px;
 }
-.login .account li input{
+
+.login .account li input {
     width: 100%;
     height: 40px;
     outline: none;
     border: 1px solid #d9d9d9;
     padding: 0 10px;
 }
-#eye_open{
+
+#eye_open {
     position: absolute;
     right: 5%;
     height: 100%;
@@ -396,16 +409,18 @@ nav {
     border: none;
     background-color: transparent;
 }
-.login .account .Remember{
+
+.login .account .Remember {
     display: flex;
     justify-content: space-between;
 }
-.login .account .Remember h3{
+
+.login .account .Remember h3 {
     font-size: 14px;
     color: #000;
 }
 
-.login .account button{
+.login .account button {
     height: 40px;
     background-color: #000;
     color: #fff;
@@ -413,14 +428,16 @@ nav {
     outline: none;
     cursor: pointer;
 }
-@media (max-width: 768px){
+
+@media (max-width: 768px) {
     .login .account {
-            position: absolute , fixed;
-            width: 320px;
-            left: -480%;
-            top: 20vh;
-        }
+        position: absolute, fixed;
+        width: 320px;
+        left: -480%;
+        top: 20vh;
+    }
 }
+
 /* end navbar */
 /* start hero__preview */
 .hero__preview {
@@ -501,6 +518,7 @@ nav {
     top: 30%;
     right: 0;
 }
+
 .animation {
     transform: translate(200px, 300px);
     animation: trans .5s forwards;
@@ -704,14 +722,16 @@ nav {
 .parent__product__scroll .item__product {
     display: flex;
     align-items: center;
-    overflow-x: scroll;
+    overflow: auto;
     width: 100%;
     white-space: nowrap;
 }
-.parent__product__scroll .item__product::-webkit-scrollbar{
+
+.parent__product__scroll .item__product::-webkit-scrollbar {
     display: none;
 }
-.parent__product__scroll .item__product .gallery{
+
+.parent__product__scroll .item__product .gallery {
     flex: none;
     display: grid;
     width: 100%;
@@ -870,16 +890,14 @@ nav {
     .parent__product__scroll h1 {
         text-align: center;
     }
-.parent__product__scroll .item__product::-webkit-scrollbar {
-    display: flex;
-}
+
+
     .parent__product__scroll .item__product {
         display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        overflow-x: scroll;
-        gap: 1.2em;
+        justify-content: center;
+        align-items: center;
         min-width: 100%;
+        gap: 1em;
         height: 460px;
     }
 
@@ -906,11 +924,10 @@ nav {
         flex-direction: column;
         gap: 2em;
     }
-.parent__product__scroll .item__product{
-    gap: 1em;
-}
+
+
     .parent__product__scroll .item__product .card {
-        min-width: 300px;
+        width: 300px;
         height: 340px;
         padding: 10px;
     }
@@ -927,13 +944,6 @@ nav {
         width: 100%;
     }
 
-    .parent__product__scroll .item__product .bi-arrow-right {
-        display: none;
-    }
-
-    .parent__product__scroll .item__product .bi-arrow-left {
-        display: none;
-    }
 }
 
 /* @media (min-width: 768px) and (max-width: 1114px) {} */
@@ -1012,24 +1022,17 @@ nav {
 
 .parent__shop .links ul {
     gap: 0;
+    display: flex;
+    align-items: center;
 }
 
 .parent__shop .links li {
     padding: 0 17px;
-    border-right: 1px solid #000;
+    /* border-right: 1px solid #000; */
     line-height: 12px;
     cursor: pointer;
     display: block;
 }
-
-.parent__shop .links ul li:nth-of-type(1) a {
-    color: #999;
-}
-
-.parent__shop .links ul li:nth-of-type(6) {
-    border: none;
-}
-
 .parent__shop .item__product {
     display: flex;
     flex-direction: row;
@@ -1038,6 +1041,9 @@ nav {
     flex-wrap: wrap;
     width: 100%;
     align-items: center;
+}
+.active{
+    color: #d4b446;
 }
 
 .parent__shop .item__product .card {
@@ -1355,32 +1361,37 @@ nav {
         padding: 2em 0;
     }
 }
+
 /* end parent__blog */
-footer{
+footer {
     background-color: #f4f5f7;
-        color: #000;
-        padding: 40px 4em;
-        margin-top: 2em;
+    color: #000;
+    padding: 40px 4em;
+    margin-top: 2em;
 }
-footer .div_1{
+
+footer .div_1 {
     flex: 1;
-        min-width: 200px;
-        display: flex;
-        flex-direction: column;
-        gap: 1em;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
 }
-footer .div_2{
+
+footer .div_2 {
     flex: 1;
-        min-width: 200px;
+    min-width: 200px;
 }
-footer .footer_inp{
-flex: 1;
+
+footer .footer_inp {
+    flex: 1;
     max-width: 330px;
     border-bottom: 1px solid #ccc;
     height: 90px;
 }
+
 @media (max-width: 767px) {
-    footer{
+    footer {
         padding: 40px 1em;
     }
 }
