@@ -15,15 +15,111 @@
     position: absolute;
     background-color: #ffffff;
     border-left: 1px solid #e1e1e1;
-    overflow: auto;
+    overflow-y: auto;
     z-index: 1000;
     display: none;
 }
-.active_carts{
+
+.active_carts {
     display: flex;
 }
-.products_dom{
+
+.products_dom {
     width: 100%;
-    height: 300px;
-    /* background-color: blue; */
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+    height: 600px;
+    width: 100%;
+    overflow-y: auto;
+    
+}
+
+
+.container_cart {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    height: 100%;
+    width: 100%;
+}
+
+.container_cart .item_cart {
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid #a5a5a5;
+    padding-bottom: 1em;
+    gap: 1em;
+}
+
+.container_cart .item_cart img {
+    width: 100px;
+    height: 100px;
+    object-fit: fill;
+}
+
+.container_cart .item_cart .title_price h2 {
+    text-align: start;
+    color: #030303;
+    font-size: 14px;
+}
+
+.container_cart .item_cart .title_price p {
+    text-align: center;
+    color: #a5a5a5;
+    font-size: 14px;
+}
+
+.title_price {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.title_price button {
+    height: 30px;
+    width: 70%;
+    outline: none;
+    border: 1px solid #030303;
+    background-color: #030303;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.circle {
+    position: absolute;
+    text-align: center;
+    display: block;
+    color: #000;
+    width: 17px;
+    height: 17px;
+    background-color: #d4b446;
+    border-radius: 50%;
+    bottom: 0;
+    left: 14px;
+    display: none;
+}
+.total{
+    display: flex;
+    justify-content: space-between;
+    color: #000;
+    font-size: 18px;
+    font-weight: 700;
+    width: 100%;
+}
+.carts_dom .btn_carts{
+    display: flex;
+    flex-direction: column;
+    gap: .8em;
+    width: 100%;
+}
+.carts_dom .btn_carts button{
+    height: 50px;
+    background-color: #030303;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    border: 1px solid #030303;
+    outline: none;
+    cursor: pointer;
 }

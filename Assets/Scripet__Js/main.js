@@ -174,9 +174,9 @@ function cardProduct(products) {
                     <div class="image__one">
                         <img src="${products.Image}" loading="lazy">
                         <div class="hover__icons">
-                            <a href="#" class="add__product"><i class="bi bi-plus-lg"></i></a>
-                            <a href="#"><i class="bi bi-bag-check"></i></a>
-                            <a href="#"><i class="bi bi-heart"></i></a>
+                            <a href="#3"><i class="bi bi-plus-lg"></i></a>
+                            <a href="#3" class="add__product" onclick=" openPopupFun(${products.id})"><i class="bi bi-bag-check"></i></a>
+                            <a href="page__Wishlist/main.html"><i class="bi bi-heart"></i></a>
                         </div>
                     </div>
                     <div class="title__image">
@@ -190,7 +190,28 @@ function cardProduct(products) {
   containerProducts.innerHTML = html;
 }
 cardProduct(products);
-
+const circle = document.querySelector(".circle");
+const buttons = document.querySelectorAll(".add__product");
+const products_dom = document.querySelector(".products_dom ");
+function openPopupFun(productId) {
+  const findSameProduct = products.find((product) => product.id == productId);
+  const item_cart = document.querySelectorAll(".item_cart");
+  console.log(findSameProduct);
+  circle.style.display = "block"
+  circle.innerHTML = item_cart.length + 1;
+  products_dom.innerHTML += `
+  <div class="container_cart">
+  <div class="item_cart">
+  <img src="${findSameProduct.Image}">
+  <div class="title_price">
+  <h2>${findSameProduct.title}</h2>
+  <p>Â£40.00 - Â£635.00</p>
+  <button>add to cart</button>
+  </div>
+  </div>
+  </div>
+  `;
+} 
 let categoryType = "All Products";
 const categoriesContainer = document.getElementById("category");
 function handleAllCategories() {
