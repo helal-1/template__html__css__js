@@ -144,13 +144,16 @@
                             <div class="products_dom">
                                 
                             </div>
-                            <div class="total">
-                                <h2>Subtotal:</h2>
-                                <span>$60.00</span>
-                            </div>
-                            <div class="btn_carts">
-                                <button>view cart</button>
-                                <button>checkout</button>
+                            <div class="content_total">
+
+                                <div class="total">
+                                    <h2>Subtotal:</h2>
+                                    <span>$60.00</span>
+                                </div>
+                                <div class="btn_carts">
+                                    <button>view cart</button>
+                                    <button>checkout</button>
+                                </div>
                             </div>
                         </div>
                     </a>
@@ -221,11 +224,12 @@
         </div>
     </div>
     <section class="hero__preview">
+        
         <span class="left">
-            <i class="bi bi-chevron-left" onclick="plusSlides(1)"></i>
+            <i class="bi bi-chevron-left" onclick="plusSlides(-1)"></i>
         </span>
         <div class="container" id="slider_hero">
-            <div class="title__page">
+            <div class="title__page activeOne">
                 <h5>
                     CHAIR <br> COLLECTION <br> 2022
                 </h5>
@@ -240,7 +244,7 @@
         </div>
         <div class="container" id="slider_hero">
 
-            <div class="title__page">
+            <div class="title__page activeOne">
                 <h5>
                     CHAIR <br> COLLECTION <br> 2022
                 </h5>
@@ -255,8 +259,9 @@
             </div>
         </div>
         <span class="right">
-            <i class="bi bi-chevron-right" onclick="plusSlides(-1)"></i>
+            <i class="bi bi-chevron-right" onclick="plusSlides(1)"></i>
         </span>
+       
     </section>
     <div class="cards">
         <div class="item__1" data-aos="fade-up" data-aos-duration="10000">
@@ -294,11 +299,11 @@
             <div class="item__product" id="slider">
                 <i class="bi bi-arrow-left" id="left"></i>
                 <div class="gallery">
-                    <div class="card" data-aos="zoom-in" data-aos-duration="10000">
+                    <div class="card" data-aos="zoom-in" data-aos-duration="10000" >
                         <div class="image__one">
                             <img src="./Assets/File__mage/1_1-300x300.webp" loading="lazy">
                             <div class="hover__icons">
-                                <a href="#"><i class="bi bi-plus-lg"></i></a>
+                                <a href="#2"><i class="bi bi-plus-lg"></i></a>
                                 <a href="./page_carts/carts.html"><i class="bi bi-bag-check"></i></a>
                                 <a href="./page__Wishlist/main.html"><i class="bi bi-heart"></i></a>
                             </div>
@@ -353,8 +358,7 @@
                             <span>Â£40.00 - Â£635.00</span>
                         </div>
                     </div>
-                </div>
-                <div class="gallery">
+            
                     <div class="card" data-aos="zoom-in" data-aos-duration="10000">
                         <div class="image__one">
                             <img src="./Assets/File__mage/1_5-300x300.webp" loading="lazy">

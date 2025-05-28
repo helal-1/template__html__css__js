@@ -58,10 +58,11 @@ function showSlides(n) {
     slides[i].style.display = "none";
   }
   slides[slideIndex - 1].style.display = "flex";
+
 }
 
 // gallery scrolling
-let scrollContainer = document.querySelector(".item__product");
+let scrollContainer = document.querySelector(".gallery");
 let Btn_prev = document.getElementById("left");
 let nextBtn = document.getElementById("right");
 Btn_prev.addEventListener("click", () => {
@@ -72,6 +73,17 @@ nextBtn.addEventListener("click", () => {
   scrollContainer.style.scrollBehavior = "smooth";
   scrollContainer.scrollLeft += 500;
 });
+setInterval(() => {
+  const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+
+  scrollContainer.style.scrollBehavior = "smooth";
+
+  if (scrollContainer.scrollLeft >= maxScroll) {
+    scrollContainer.scrollLeft = 0;
+  } else {
+    scrollContainer.scrollLeft += 300;
+  }
+}, 3000);
 // password
 const pass = document.getElementById("password");
 const btn_eye = document.getElementById("eye_open");
@@ -204,10 +216,15 @@ function openPopup_Fun(productId) {
   const findSameProduct = products.find((product) => product.id == productId);
   const item_cart = document.querySelectorAll(".item_cart");
   console.log(findSameProduct);
-  circle.style.display = "block";
-  circle.innerHTML = item_cart.length + 1;
+    circle.style.display = "block";
+    circle.innerHTML = item_cart.length + 1;
+  
   products_dom.innerHTML += `
   <div class="container_cart">
+  <div class="content_carts">
+  <div class="btnClose">
+  <i class="bi bi-x"></i>
+  </div>
   <div class="item_cart">
   <img src="${findSameProduct.Image}">
   <div class="title_price">
@@ -217,7 +234,19 @@ function openPopup_Fun(productId) {
   </div>
   </div>
   </div>
+  </div>
   `;
+  const btnClose = document.querySelectorAll(".bi-x");
+
+  btnClose.forEach((btn) =>
+    btn.addEventListener("click", () => {
+      const cart = btn.closest(".content_carts");
+      if (cart) {
+        cart.classList.add("activeCloseCart"); 
+      }
+    })
+  );
+
 }
 let categoryType = "All Products";
 const categoriesContainer = document.getElementById("category");
@@ -232,7 +261,7 @@ function handleAllCategories() {
   let html = ``;
   results.forEach(
     (category) =>
-      (html += `<ul>
+      (html += `<ul class="category">
                     <li data-category = "${category.value}" class = "${
         category.value == categoryType ? "active" : ""
       }">${category.label}</li>
@@ -330,12 +359,13 @@ function openPopupFun(productId) {
                  `;
   const btn_eve = document.querySelectorAll(".btn_eve");
   console.log(btn_eve);
-  btn_eve.forEach((btn)=> {
-    btn.addEventListener("click",()=>{
+  btn_eve.forEach((btn) => {
+    btn.addEventListener("click", () => {
       btn_eve.forEach((btn) => btn.classList.remove("active_eve"));
       btn.classList.add("active_eve");
-    })
-  })
+    });
+  });
+    // counter 
   const inp = popupContaier.querySelector(".num");
   const pls = popupContaier.querySelector(".pls");
   const min = popupContaier.querySelector(".min");

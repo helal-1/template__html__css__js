@@ -10,7 +10,11 @@
 section {
     overflow: hidden;
 }
-
+.content_nav{
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 50%);
+}
 a {
     text-decoration: none;
 }
@@ -54,7 +58,7 @@ header {
 nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /* gap: 10em; */
 }
 
 .icons__options {
@@ -241,17 +245,19 @@ nav {
 
 .login .account {
     position: absolute;
-    display: flex;
-    height: auto;
-    width: 400px;
-    padding: 2em 2em;
+    display: none;
+    /* Hidden by default */
+    top: 20vh;
+    left: 50%;
+    transform: translateX(-105vh);
+    width: 90%;
+    min-width:  400px;
+    padding: 2em;
     background-color: #fff;
     border: 1px solid #d9d9d9;
-    left: -110vh;
-    top: 20vh;
     flex-direction: column;
     gap: 2em;
-    display: none;
+    z-index: 999;
 }
 
 .login .account h2 {
@@ -295,30 +301,29 @@ nav {
     cursor: pointer;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     .login .account {
-        position: absolute, fixed;
-        width: 320px;
-        left: -480%;
         top: 20vh;
-    }
-}
+        left: 50%;
+            transform: translateX(-70%);
+        padding: 1.5em;
+        min-width:   330px;
+    } }
 
  nav .footer_inp {
     flex: 1;
-    max-width: 230px;
-    border-bottom: 1px solid #ccc;
+    max-width: calc(100% - 50%);
     height: 40px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    position: relative;
 }
-
 nav .footer_inp input {
     padding: 10px;
     width: 300px;
     margin-top: 0em;
     border: none;
+    border-bottom: 1px solid #666;
     background-color: transparent;
     outline: none;
 }
@@ -435,62 +440,176 @@ footer .footer_inp {
         padding: 40px 1em;
     }
 }
-@media (max-width: 767px){
-    nav .footer_inp {
-           display: none;
+
+/* Responsive adjustments */
+/* Tablets and smaller (≤ 1024px) */
+@media (max-width: 1024px) {
+    header {
+        padding: 10px;
+    }
+.box_img{
+   margin-left: 2em;
+   width: 250px;
+   height: 100px;
+}
+.box_img img{
+    width: 200px;
+    height: 100px;
+}
+    .wishlist {
+        flex-direction: column;
+        gap: 2em;
+        padding: 6em 2em 4em;
+    }
+
+    .product {
+        padding: 4em 2em;
+    }
+
+    .product .title {
+        gap: 4em;
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+       
+    }
+        .product .title h2{
+            font-size: 12px;
+            text-align: center;
+            
         }
-                .product {
-                    width: 100%;
-                    padding: 6em 1.3em;
-                    display: flex;
-                    flex-direction: column;
-                    gap: 2em;
-                }
-        
-                .product .title {
-                    display: flex;
-                    gap: 3em;
-                    padding-left: 1.3em;
-                }
-        
-                .card {
-                    display: flex;
-                    gap: 2em;
-                    align-items: center;
-                    border-top: 1px solid #e5e5e5;
-                    padding-top: 2em;
-                    flex-wrap: wrap;
-                    flex-direction: row;
-                }
-        
-                .box_img {
-                    display: flex;
-                    align-items: center;
-                    gap: 2em;
-                }
-        
-                .box_img img {
-                    width: 100px;
-                }
-        
-                .price {
-                    width: 140px;
-                    margin-left: 1em;
-                    padding-left: 0em;
-                    display: flex;
-                    justify-content: none;
-                    gap: 2em;
-                }
-        
-                .btn {
-                    margin-left: 3em;
-                }
-        
-                .btn a {
-                    background-color: #232323;
-                    color: #fff;
-                    font-size: 12px;
-                    line-height: 1;
-                    padding: 10px 20px;
-                }
+    .card {
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+    }
+
+    .price {
+        width: 100%;
+        position: absolute;
+        left: 40%;
+        padding-left: 0;
+        flex-direction: row;
+        justify-content: start;
+        gap: 20%;
+    }
+
+    .btn {
+        width: 100%;
+    }
+    
+    .btn a {
+        margin: 0 auto;
+        width: 80%;
+        display: block;
+        text-align: center;
+    }
+
+    footer {
+        padding: 30px 2em;
+    }
+}
+
+/* Phones and smaller (≤ 768px) */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1.5em;
+        width: 100%;
+    }
+    .content_nav{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+.footer_inp{
+    order: 1;
+    width: 100%;
+    display: none;
+}
+.footer_inp input{
+    width: 200px;
+    background-color: red;
+}
+    ul {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .icons__options {
+        flex-direction: row;
+        gap: 1em;
+        justify-content: center;
+    }
+
+    .menu__down .drop__down__icon {
+       z-index: 99999;
+    }
+
+    .box_img img {
+        width: 80px;
+    }
+
+    .wishlist {
+        padding: 4em 1.5em;
+    }
+
+    .product {
+        padding: 3em 1.5em;
+    }
+
+    .product .title {
+        padding-left: 0;
+        font-size: 1rem;
+        display: flex;
+    }
+
+    .price,
+    .btn {
+        width: 100%;
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .btn a {
+        font-size: 14px;
+        padding: 12px 0;
+    }
+
+    footer {
+        padding: 20px 1.5em;
+    }
+}
+
+/* Extra small devices (≤ 480px) */
+@media (max-width: 480px) {
+
+    .icons__options i,
+    .icons__options .bi-person,
+    .icons__options .bi-list {
+        font-size: 20px;
+    }
+    .box_img img {
+        width: 60px;
+    }
+
+     
+
+    .wishlist,
+    .product {
+        padding: 2em 1em;
+    }
+
+    .footer_inp input {
+        width: 100px;
+    }
+
+    .footer_inp {
+        max-width: 100%;
+        display: none;
+    }
+    .follow .icons__links {
+        flex-wrap: wrap;
+    }
 }

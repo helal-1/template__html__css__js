@@ -29,12 +29,10 @@
     display: flex;
     gap: 1em;
     flex-direction: column;
-    height: 600px;
+    height: auto;
     width: 100%;
     overflow-y: auto;
-    
 }
-
 
 .container_cart {
     display: flex;
@@ -122,4 +120,15 @@
     border: 1px solid #030303;
     outline: none;
     cursor: pointer;
+}
+.content_total{
+    width: 100%;
+    height: calc(100% - 600px);
+}
+.content_carts{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.activeCloseCart{
+    display: none;
 }
