@@ -387,3 +387,7 @@ function closePopupFun() {
   popup.classList.remove("active");
   popupContaier.classList.remove("active");
 }
+const loadingOverlay = document.querySelector(".loading-overlay");
+setTimeout(()=>{
+  loadingOverlay.style.display= "none"
+},2500)
